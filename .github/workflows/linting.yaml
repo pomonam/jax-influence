@@ -32,4 +32,4 @@ jobs:
         pip install isort
     - name: Run isort
       run: |
-        isort src --check --diff
+        isort jax_influence --check --diff
