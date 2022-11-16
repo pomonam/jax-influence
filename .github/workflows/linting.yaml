@@ -17,7 +17,7 @@ jobs:
         pip install pylint
     - name: Run pylint
       run: |
-        pylint src
+        pylint jax_influence
   isort:
     runs-on: ubuntu-latest
     steps:

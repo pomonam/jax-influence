@@ -312,7 +312,7 @@ class InfluenceComputer:
       v = self.get_grad_single_train_loss_wo_wd(
           params, train_index, state=state)
 
-    for i in range(self.repeat):
+    for _ in range(self.repeat):
       self.key, subkey = jax.random.split(self.key)
       choices = jax.random.choice(subkey,
                                   jnp.arange(len(self.train_inputs)),
@@ -377,7 +377,7 @@ class InfluenceComputer:
     r_estimate = tree_zeros_like(params)
     v = self.get_grad_single_test_loss_wo_wd(params, test_index)
 
-    for i in range(self.repeat):
+    for _ in range(self.repeat):
       self.key, subkey = jax.random.split(self.key)
       choices = jax.random.choice(subkey,
                                   jnp.arange(len(self.train_inputs)),
@@ -393,7 +393,6 @@ class InfluenceComputer:
     lissa_influence = _div(r_estimate, self.train_inputs.shape[0])
     lissa_params = _add(params, lissa_influence)
     return lissa_params, r_estimate
-
 
   def compute_single_test_stest_influence(self,
                                           params,

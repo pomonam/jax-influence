@@ -4,12 +4,10 @@ Some codes are adapted from:
 https://github.com/google-research/jax-influence.
 """
 
-from functools import partial
 import random
 
 import haiku as hk
 import jax
-from jax.flatten_util import ravel_pytree
 import jax.nn
 import matplotlib.pyplot as plt
 import numpy as np

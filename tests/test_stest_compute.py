@@ -1,11 +1,16 @@
 from absl.testing import absltest
 from absl.testing import parameterized
-from jax_influence.computer import InfluenceComputer
+import haiku as hk
+import jax
 from jax.config import config
+from jax.flatten_util import ravel_pytree
 import jax.numpy as jnp
+import numpy as np
 from sklearn.linear_model import LinearRegression as SkLR
 
-from tests.utils import *
+from jax_influence.computer import InfluenceComputer
+from tests.utils import LinearRegression
+from tests.utils import load_dummy_data
 
 config.update("jax_enable_x64", True)
 

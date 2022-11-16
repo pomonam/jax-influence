@@ -1,11 +1,16 @@
 from absl.testing import absltest
 from absl.testing import parameterized
-import jax.nn as nn
+import haiku as hk
+import jax
+from jax import nn
 import jax.numpy as jnp
+import numpy as np
 from sklearn import linear_model
 
 from jax_influence.computer import InfluenceComputer
-from tests.utils import *
+from tests.utils import BinaryLogisticRegression
+from tests.utils import load_binary_mnist_data
+from tests.utils import visualize_result
 
 
 def log_clip(x):
