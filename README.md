@@ -14,8 +14,6 @@ The repository aims to provide a simple and minimal implementation of influence 
 implementations in other frameworks, a PyTorch version is available [here](https://github.com/alstonlo/torch-influence), and 
 a PyTorch EK-FAC implementation can be found [here](https://github.com/pomonam/kronfluence).
 
-______________________________________________________________________
-
 ## Installation
 
 To install JAX-Influence, you can use pip to install from the source:
@@ -27,8 +25,6 @@ cd jax-influence
 pip install -e .   
 pip install -e '.[jax_gpu]' -f 'https://storage.googleapis.com/jax-releases/jax_cuda_releases.html' # Replace `jax_gpu` with `jax_cpu` if you wish to install the CPU version.
  ```
-
-______________________________________________________________________
 
 ## Contributors
 
