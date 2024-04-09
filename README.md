@@ -1,22 +1,24 @@
 <div align="center">    
 
-# jax-influence
+## JAX-Influence
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE.txt)
 
 </div>
 
-jax-influence is a Jax implementation of influence functions, a classical
-technique from robust statistics that estimates the effect of removing a single training data point on a model’s
-learned parameters. The code is supplement to the paper [If Influence Functions are the Answer, Then What is the Question?](https://arxiv.org/abs/2209.05364).
+JAX-Influence is a JAX implementation of influence functions, a classical technique from robust statistics that
+estimates the impact of removing a single training data point on a model's learned parameters. This repository
+complements the paper ["If Influence Functions are the Answer, Then What is the Question?"](https://arxiv.org/abs/2209.05364).
 
-This library aims to be simple and minimal. Furthermore, the PyTorch implementation can be found at [here](https://github.com/alstonlo/torch-influence).
+The repository aims to provide a simple and minimal implementation of influence functions in JAX. For those interested in 
+implementations in other frameworks, a PyTorch version is available [here](https://github.com/alstonlo/torch-influence), and 
+a PyTorch EK-FAC implementation can be found [here](https://github.com/pomonam/kronfluence).
 
 ______________________________________________________________________
 
 ## Installation
 
-Pip from source:
+To install JAX-Influence, you can use pip to install from the source:
 
 ```bash
 git clone https://github.com/pomonam/jax-influence
@@ -28,16 +30,8 @@ pip install -e '.[jax_gpu]' -f 'https://storage.googleapis.com/jax-releases/jax_
 
 ______________________________________________________________________
 
-## Quickstart
-
-### Overview
-
-An end-to-end example can be found in `tests`. We will add more examples in the future, including PBRF computation.
-
-______________________________________________________________________
-
 ## Contributors
 
 - [Juhan Bae](https://www.juhanbae.com/)
-- [Nathan Ng](https://scholar.google.com/citations?user=psuwztYAAAAJ&hl=en)
-- [Alston Lo](https://github.com/alstonlo)
+- [Nathan Ng](https://nng555.github.io/)
+- [Alston Lo](https://alstonlo.github.io/)
